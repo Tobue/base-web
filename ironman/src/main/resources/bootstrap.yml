@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: ironman
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+      password: ${CONFIG_SERVICE_PASSWORD:testpassword} # 如果环境变量中没有 CONFIG_SERVICE_PASSWORD 则使用 testpassword
+      username: user
+      profile: dev
+
+  main:
+    allow-bean-definition-overriding: true

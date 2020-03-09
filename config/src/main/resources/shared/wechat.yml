@@ -1,0 +1,15 @@
+security:
+  oauth2:
+    client:
+      clientId: app
+      clientSecret: testpassword
+      accessTokenUri: http://localhost:5000/auth/oauth/token
+      grant-type: client_credentials
+      scope: all
+    resource:
+      userInfoUri: http://localhost:5000/auth/user
+
+server:
+  servlet:
+    context-path: /wechat
+  port: 8091
